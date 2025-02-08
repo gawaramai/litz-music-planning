@@ -162,6 +162,10 @@ h2 {
     padding: 75px 10% 100px 10%;
 }
 
+.services > h2 {
+    flex: 0 0 100%;
+}
+
 .service-box {
     flex: 1 1 200px;
     /* margin: 10px; */
