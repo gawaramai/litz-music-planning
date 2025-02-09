@@ -7,6 +7,7 @@
 :root {
     /* 変数を定義 */
     --header-height: 90px; 
+    /* --header-height: 15%;  */
     --border-waight: 2px;
     --border-color: orangered;
     --padding-left-light: 20px;
@@ -18,7 +19,7 @@
 }
 
 /* 余白をリセット */
-body, div, footer, header, h1, h2, h3, li, main, nav, p, ul {
+a, body, div, footer, header, h1, h2, h3, li, main, nav, p, ul {
     margin: 0;
     padding: 0;
 }
@@ -35,11 +36,14 @@ body {
 header {
     background: white;
     display: grid;
-    grid-template-columns: 100px 1fr 100px;
-    /* grid-template-rows: 50px 35px; */
+    /* grid-template-columns: 100px 1fr 100px; */
+    grid-template-columns: 20% 1fr 20%;
+    /* height: 15%; */
     height: var(--header-height);
-    grid-template-rows: 45px auto;
-    padding: 15px 0 0 15px;
+    grid-template-rows: 60% auto;
+    /* grid-template-rows: 45px auto; */
+    /* padding: 15px 0 0 15px; */
+    padding: 1% 2% 0 2%;
     position: fixed;
     top: 0;
     width: 100%;
@@ -73,13 +77,20 @@ header {
     font-weight: bold;
 }
 
-/* .logo > img {
-    height: 50px;
-} */
+.logo {
+    place-content: center;
+}
+
+.logo > a > img {
+    /* height: 35px; */
+    height: 65%;
+    /* width: auto; */
+}
 
 nav {
     grid-column: 1 / 4;
     /* margin-top: 1px; */
+    /* margin-top: 1%; */
 }
 
 nav ul {
@@ -90,6 +101,7 @@ nav li {
     border-bottom: var(--border-waight) solid transparent;
     display: inline-block;
     width: 100px;
+    /* width: 15%; */
 }
 
 /* nav li:hover{
@@ -134,7 +146,8 @@ main {
     color: black;
     /* font-family: "Noto Serif JP", serif; */
     font-weight: normal;
-    font-size: 70px;
+    /* font-size: 70px; */
+    font-size: 350%;
 }
 
 .main-visual-contents button {
@@ -258,33 +271,27 @@ footer p {
     text-align: left;
 }
 
-@media (max-width: 425px) {
-    header {
-        background: white;
-        display: grid;
-        grid-template-columns: 100px 1fr 100px;
-        /* grid-template-rows: 50px 35px; */
-        height: var(--header-height);
-        grid-template-rows: 45px auto;
-        padding: 15px 0 0 15px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-    }
+@media (min-width: 769px) {
+     
+    /* nav li {
+        width: 20%;
+    } */
     
-    .services {
-        flex-direction: column;
-        align-items: center;
+    .service-box {
+        flex: 1 1 calc(25% - 20px); /* 横1行に4つ */
     }
 
-    .service-box {
-        flex: 1 1 calc(100% - 20px); /* 横4行に1つずつ */
-    }
+    /* .service-box-overlay > h3 {
+        font-size: 20px;
+    } */
 }
 
+@media (min-width: 427px) and (max-width: 768px) {
+    
+    /* nav li {
+        width: 30%;
+    } */
 
-@media (min-width: 426px) and (max-width: 768px) {
     .service-box {
         flex: 1 1 calc(50% - 20px); /* 横2行に2つずつ */
     }
@@ -294,12 +301,47 @@ footer p {
     } */
 }
 
-@media (min-width: 769px) {
-    .service-box {
-        flex: 1 1 calc(25% - 20px); /* 横1行に4つ */
+@media (max-width: 426px) {
+    /* header { */
+        /* background: white; */
+        /* display: grid; */
+        /* grid-template-columns: 100px 1fr 100px; */
+        /* grid-template-rows: 25px 50px 35px; */
+        /* height: var(--header-height); */
+        /* grid-template-rows: 45px auto; */
+        /* padding: 15px 0 0 15px; */
+        /* position: fixed; */
+        /* top: 0; */
+        /* width: 100%; */
+        /* z-index: 1000; */
+    /* } */
+
+    .logo > a > img {
+        height: 25px;
     }
 
-    /* .service-box-overlay > h3 {
-        font-size: 20px;
-    } */
+    .language-switch > ul > li > a {
+        font-size: 14px;
+    }
+
+    nav li {
+        width: 30%;
+    }
+
+    nav > ul > li > a {
+        font-size: 14px;
+    }
+
+    .main-visual-contents h1{
+        font-size: 33px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        flex: 1 1 calc(100% - 20px); /* 横4行に1つずつ */
+    }
 }
