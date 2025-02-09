@@ -9,8 +9,11 @@
     --header-height: 90px; 
     --border-waight: 2px;
     --border-color: orangered;
+    --padding-left-light: 20px;
     --text-color-basic: #333;
     --text-color-deactivate: #616161;
+    /* --text-size-service-box-overlay-h3: 32px; */
+    /* --text-size-service-box-overlay-h3: 150%; */
 	scroll-padding: var(--header-height);
 }
 
@@ -69,6 +72,10 @@ header {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* .logo > img {
+    height: 50px;
+} */
 
 nav {
     grid-column: 1 / 4;
@@ -148,6 +155,7 @@ main {
 
 .greeting {
     margin-top: 75px;
+    padding: var(--padding-left-light);
 }
 
 h2 {
@@ -188,18 +196,15 @@ h2 {
     position: absolute;
 }
 
-.service-box-overlay h3 {
-    /* color: white; */
+.service-box-overlay > h3 {
     color: var(--text-color-basic);
-    font-size: 32px;
-    font-weight: normal;
+    /* font-size: var(--text-size-service-box-overlay-h3); */
+    /* font-weight: bold; */
     padding: 10px 0 0 10px;
 }
 
-.service-box-overlay p {
-    /* color: white; */
-    color: var(--text-color-basic);
-    font-size: 16px;
+.service-box-overlay > p {
+    color: var(--text-color-deactivate);
     font-weight: normal;
     padding: 0 0 0 10px;
 }
@@ -253,9 +258,48 @@ footer p {
     text-align: left;
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 425px) {
+    header {
+        background: white;
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        /* grid-template-rows: 50px 35px; */
+        height: var(--header-height);
+        grid-template-rows: 45px auto;
+        padding: 15px 0 0 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    
     .services {
         flex-direction: column;
         align-items: center;
     }
+
+    .service-box {
+        flex: 1 1 calc(100% - 20px); /* 横4行に1つずつ */
+    }
+}
+
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .service-box {
+        flex: 1 1 calc(50% - 20px); /* 横2行に2つずつ */
+    }
+
+    /* .service-box-overlay > h3 {
+        font-size: 20px;
+    } */
+}
+
+@media (min-width: 769px) {
+    .service-box {
+        flex: 1 1 calc(25% - 20px); /* 横1行に4つ */
+    }
+
+    /* .service-box-overlay > h3 {
+        font-size: 20px;
+    } */
 }
