@@ -15,7 +15,7 @@
     --text-color-deactivate: #616161;
     /* --text-size-service-box-overlay-h3: 32px; */
     /* --text-size-service-box-overlay-h3: 150%; */
-	scroll-padding: var(--header-height);
+	/* scroll-padding: var(--header-height); */
 }
 
 /* 余白をリセット */
@@ -115,6 +115,7 @@ nav a {
 
 main {
     background-color: white;
+    padding-top: var(--header-height);
 }
 
 .main-visual {
