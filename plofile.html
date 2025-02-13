@@ -5,34 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロフィール | 律音楽企画</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="header-box"></div>
-    <header>
-        <div class="language-switch">
-            <ul>
-                <li><a class="japanese-switch" href="plofile.html">Ja</a></li>
-                <li><a class="switch-separator">/</a></li>
-                <li><a class="english-switch" href="plofile-english.html">En</a></li>
-            </ul>            
-        </div>
-        <div class="logo">
-            <!-- <a href="index.html"><img src="images/logo_kouzansousho_short.png" alt="logo"></a> -->
-            <!-- <a href="index.html"><img src="images/logo-JennaSue.png" alt="logo"></a> -->
-            <!-- <a href="index.html"><img src="images/logo-kouzansousho.png" alt="logo"></a> -->
-            <a href="index.html"><img src="images/logo-kinbuntai.png" alt="logo"></a>
-            <!-- <a href="index.html"><img src="images/logo-kouzansousho.png" alt="logo"></a> -->
-            <!-- <a href="index.html"><img src="images/logo-kouzansousho_short.png" alt="logo"></a> -->
-        </div>
-        <div class="blank"></div>
-        <nav>
-            <ul>
-                <li><a href="index.html#services">サービス</a></li>
-                <li><a href="price.html">料金</a></li>
-                <li><a href="plofile.html">プロフィール</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header id="header"></header>
     <main>
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a></li>
@@ -43,11 +19,13 @@
             <p>考え中・・・</p>
         </div>
     </main>
-	<footer>
-        <a href="https://www.facebook.com/people/%E5%A1%9A%E6%9C%AC%E9%BA%BB%E5%A4%8F/pfbid02ekQLon4gjxgsgC7En8FfFJU2FxLK3SU1Neymws1KDvwqBLNFmpntFgyvW6G7C3e8l/" target="_blank">
-            <img src="images/Facebook_Logo_Secondary.png" alt="facebook link">
-        </a>
-		<p>&copy; 2025 律音楽企画 All rights reserved.</p>
-	</footer>
+    <footer id="footer"></footer>
+    <script>
+        //共通パーツ読み込み
+        $(function () {
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        });
+    </script>
 </body>
 </html>
