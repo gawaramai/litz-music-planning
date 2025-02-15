@@ -343,4 +343,25 @@ footer p {
     .service-box {
         flex: 1 1 calc(100% - 20px); /* 横4行に1つずつ */
     }
+
+    
+    .language-switch {
+        background-color: #616161;
+    }
+
+    .logo {
+        background-color: antiquewhite;
+    }
+
+    .blank {
+        background-color: aqua;
+    }
+
+    nav {
+        background-color: aquamarine;
+    }
+
+    nav > ul > li {
+        background-color: cadetblue;
+    }
 }
