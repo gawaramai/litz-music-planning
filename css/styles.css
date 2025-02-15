@@ -19,7 +19,7 @@
 }
 
 /* 余白をリセット */
-a, body, div, footer, header, h1, h2, h3, li, main, nav, p, ul {
+a, body, div, footer, header, h1, h2, h3, li, main, nav, p, strong, ul {
     margin: 0;
     padding: 0;
 }
@@ -328,7 +328,7 @@ footer p {
     }
 
     nav > ul > li > a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .main-visual-contents h1{
