@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>調律 | 律音楽企画</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script>
+        //ページタイトルの定義
+        const pagetitle = "調律"
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">サービス</a></li>
+            <li><span id="pagetitle_breadcrumb"></span></li>
+        </ul>
+        <div class="article">
+            <h1><span id="pagetitle_h1"></span></h1>
+            <p>
+                重要なお知らせがございます。
+                <br>
+                <br>
+                <br>
+                <br>
+                <strong class="ultra-strong">調律は超重要です！！！</strong>
+                <br>
+                <br>
+                <br>
+                <br>
+                調律しないとどうなるか？
+                <br>
+                ※不安になるようなことをお伝えします、申し訳ございません。
+                <br>
+                <br>
+                <ul>
+                    <li>音の違和感の発生</li>
+                    <li>カビの発生</li>
+                    <li>害虫の発生</li>
+                    <li>故障、そして、修理費用の発生</li>
+                </ul>
+                <br>
+                <br>
+                豊かなピアノライフ、
+                より長く楽しむために、
+                お客様のピアノを守るお手伝いをいたします。
+                <br>
+                <br>
+                <strong>お気軽にお問い合わせください。</strong>
+                <br>
+                <br>
+                <button type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeoPRYFbUwWECARwvEN8Kf5aXmdybdXSYvoF4KUFlMPW9rw6Q/viewform?usp=header')">お問い合わせ</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <strong>調律料金 ＋ 出張料金</strong>
+                <br>
+                をいただき、ピアノ調律をいたします。
+                <br>
+                <br>
+                <a href="price.html">
+                    <button type="button">料金</button>
+                </a>
+                <br>
+                <br>
+            </p>
+        </div>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+        //共通パーツ読み込み
+        $(function () {
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        });
+
+        // ページタイトルの表示
+        document.getElementById('pagetitle_breadcrumb').textContent = pagetitle;
+        document.getElementById('pagetitle_h1').textContent = pagetitle;
+    </script>
+</body>
+</html>

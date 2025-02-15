@@ -173,7 +173,7 @@ main {
     padding: var(--padding-left-light);
 }
 
-h2 {
+.greeting > h2 {
     margin-top: 25px;
     margin-bottom: 25px;
 }
@@ -187,6 +187,7 @@ h2 {
 
 .services > h2 {
     flex: 0 0 100%;
+    margin-bottom: 25px;
 }
 
 .service-box {
@@ -209,6 +210,12 @@ h2 {
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.0) 90%); */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 20%, rgba(0, 0, 0, 0.0) 80%);
     position: absolute;
+}
+
+.service-box-overlay:hover{
+    background-color: rgba(255,255,255,0.6);;
+	opacity: 1;
+	transition:0.3s;
 }
 
 .service-box-overlay > h3 {
@@ -261,16 +268,6 @@ footer p {
 .breadcrumb li a {
     color: var(--text-color-basic);
     text-decoration: none;
-}
-
-.page-price {
-    padding: 20px 20px;
-    text-align: left;
-}
-
-.page-price {
-    padding: 20px 20px;
-    text-align: left;
 }
 
 @media (min-width: 769px) {

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>料金 | 律音楽企画</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script>
+        //ページタイトルの定義
+        const pagetitle = "料金"
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -12,25 +17,44 @@
     <main>
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a></li>
-            <li>料金</li>
+            <li><span id="pagetitle_breadcrumb"></span></li>
         </ul>
-        <div class="page-price">
-            <h1>料金</h1>
+        <div class="article">
+            <h1><span id="pagetitle_h1"></span></h1>
             <p>※税込み</p>
-            <h2>はじめてのお客様</h2>
-            <h3>アップライトピアノ</h3>
-            <p>¥考え中</p>
-            <h3>グランドピアノ</h3>
-            <p>¥考え中</p>
-            <p></p>
-            <h2>2回目以降のお客様</h2>
-            <h3>アップライトピアノ</h3>
-            <p>¥考え中</p>
-            <h3>グランドピアノ</h3>
-            <p>¥考え中</p>
-            <h2>出張料金</h2>
-            <h3>神奈川県</h3>
-            <p>¥考え中</p>
+            <div class="service-price">
+                <h2>調律</h2>
+                <h3>アップライトピアノ</h3>
+                <p>¥考え中</p>
+                <h3>グランドピアノ</h3>
+                <p>¥考え中</p>
+            </div>
+
+            <div class="service-price">
+                <h2>演奏</h2>
+                <p>¥考え中</p>
+            </div>
+
+            <div class="service-price">
+                <h2>編曲</h2>
+                <p>¥考え中</p>
+            </div>
+
+                
+            <div class="service-price">
+                <h2>譜面製作</h2>
+                <p>¥考え中</p>
+                <h3>オプション</h3>
+                <p>読譜サポート料金</p>
+                <p>¥考え中</p>
+            </div>
+
+                
+            <div class="service-price">
+                <h2>出張料金</h2>
+                <h3>神奈川県</h3>
+                <p>¥考え中</p>
+            </div>
         </div>
     </main>
     <footer id="footer"></footer>
@@ -40,6 +64,10 @@
         $("#header").load("header.html");
         $("#footer").load("footer.html");
         });
+
+        // ページタイトルの表示
+        document.getElementById('pagetitle_breadcrumb').textContent = pagetitle;
+        document.getElementById('pagetitle_h1').textContent = pagetitle;
     </script>
 </body>
 </html>

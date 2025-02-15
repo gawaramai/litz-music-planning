@@ -21,39 +21,49 @@
         </div>
         <div class="greeting">
             <h2>ご挨拶</h2>
-            <p>横浜市在住の調律師、帆下本 冨賀夏(ほげもと ふがなつ)と申します。</p>
-            <p>これまで色々な名義で演奏や編曲、譜面製作の仕事をしてきました。<p>
-            <p>たくさんの方と交流できることを楽しみにしています。よろしくお願いいたします。<p>
+            <p>
+                横浜市在住の調律師、帆下本 冨賀夏(ほげもと ふがなつ)と申します。<br>
+                これまで色々な名義で演奏や編曲、譜面製作の仕事をしてきました。<br>
+                たくさんの方と交流できることを楽しみにしています。よろしくお願いいたします。
+            <p>
         </div>
 		<div class="services">
             <h2 id="services">サービス</h2>
 			<div class="service-box">
-                <img src="images/piano-tuning.png" alt="piano-tuning">
-                <div class="service-box-overlay">
-                    <h3>調律</h3>
-                    <p>LEARN MORE →</p>
-                </div>
+                <a href="service-tuning.html">
+                    <img src="images/piano-tuning.png" alt="piano-tuning">
+                    <div class="service-box-overlay">
+                        <h3>調律</h3>
+                        <p>LEARN MORE →</p>
+                    </div>
+                </a>
             </div>
 			<div class="service-box">
-                <img src="images/piano-performance.png" alt="piano-performance">
-                <div class="service-box-overlay">
-                    <h3>演奏</h3>
-                    <p>LEARN MORE →</p>
-                </div>
+                <a href="service-performance.html">
+                    <img src="images/piano-performance.png" alt="piano-performance">
+                    <div class="service-box-overlay">
+                        <h3>演奏</h3>
+                        <p>LEARN MORE →</p>
+                    </div>
+                </a>
             </div>
 			<div class="service-box">
-                <img src="images/arrangement.png" alt="arrangement">
-                <div class="service-box-overlay">
-                    <h3>編曲</h3>
-                    <p>LEARN MORE →</p>
-                </div>
+                <a href="service-arrangement.html">
+                    <img src="images/arrangement.png" alt="arrangement">
+                    <div class="service-box-overlay">
+                        <h3>編曲</h3>
+                        <p>LEARN MORE →</p>
+                    </div>
+                </a>
             </div>
 			<div class="service-box">
-                <img src="images/sheet-music-for-piano.png" alt="sheet-music-for-piano">
-                <div class="service-box-overlay">
-                    <h3>譜面製作</h3>
-                    <p>LEARN MORE →</p>
-                </div>
+                <a href="service-sheetmusic.html">
+                    <img src="images/sheet-music-for-piano.png" alt="sheet-music-for-piano">
+                    <div class="service-box-overlay">
+                        <h3>譜面製作</h3>
+                        <p>LEARN MORE →</p>
+                    </div>
+                </a>
             </div>
         </div>
     </main>
@@ -61,8 +71,18 @@
     <script>
         //共通パーツ読み込み
         $(function () {
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+
+        // service-box-overlayクリック時の処理
+        $(document).ready(function(){
+            $('.service-box-overlay').click(function(){
+                var url = $(this).data('url');
+                if(url){
+                    window.location.href = url;
+                }
+            });
         });
     </script>
 </body>

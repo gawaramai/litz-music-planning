@@ -1,0 +1,28 @@
+
+:root {
+    /* 変数を定義 */
+    --padding: 20px;
+    --margin: 20px;
+}
+
+.article {
+    list-style: none;
+    padding: var(--padding);
+    text-align: left;
+}
+
+.service-price {
+    margin-top: var(--margin);
+    /* margin-bottom: var(--margin);
+    margin-top: 40px; */
+}
+
+.article li {
+    margin-left: var(--margin);
+}
+
+.ultra-strong {
+    color: #ff0000; 
+    font-weight: bold; 
+    font-size: 36px;
+}

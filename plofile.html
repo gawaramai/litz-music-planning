@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロフィール | 律音楽企画</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/article.css">
+    <script>
+        //ページタイトルの定義
+        const pagetitle = "プロフィール"
+    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -12,10 +17,10 @@
     <main>
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a></li>
-            <li>プロフィール</li>
+            <li><span id="pagetitle_breadcrumb"></span></li>
         </ul>
-        <div class="page-price">
-            <h1>プロフィール</h1>
+        <div class="article">
+            <h1><span id="pagetitle_h1"></span></h1>
             <p>考え中・・・</p>
         </div>
     </main>
@@ -26,6 +31,10 @@
         $("#header").load("header.html");
         $("#footer").load("footer.html");
         });
+
+        // ページタイトルの表示
+        document.getElementById('pagetitle_breadcrumb').textContent = pagetitle;
+        document.getElementById('pagetitle_h1').textContent = pagetitle;
     </script>
 </body>
 </html>
