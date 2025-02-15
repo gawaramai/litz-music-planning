@@ -9,7 +9,8 @@
     --header-height: 90px; 
     /* --header-height: 15%;  */
     --border-waight: 2px;
-    --border-color: orangered;
+    --border-color: #333;
+    --border-color: #616161;
     --padding-left-light: 20px;
     --text-color-basic: #333;
     --text-color-deactivate: #616161;
@@ -152,19 +153,20 @@ main {
 }
 
 .main-visual-contents button {
-    background-color: orangered;
-    border: none;
-    color: white;
+    background-color: white;
+    border: var(--border-color) 1px solid;
+    border-radius: 30px;
+    color: var(--text-color-basic);
     cursor: pointer;
     font-family: serif;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
     margin-top: 20px;
     padding: 10px 20px;
-    border-radius: 30px;
 }
 
 .main-visual-contents button:hover {
-    background-color: #AD2333;
+    background-color: lightgrey
 }
 
 .greeting {
