@@ -1,8 +1,35 @@
+@import url(styles.css);
 
 :root {
     /* 変数を定義 */
     --padding: 20px;
     --margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 90%;
+}
+
+table th, table td {
+  border: solid 1px var(--border-color);
+  padding: 1%;
+}
+
+table th:nth-child(1), 
+table td:nth-child(1) {
+  width: 50%;
+}
+
+table th:nth-child(2), 
+table td:nth-child(2) {
+  width: 25%;
+}
+
+table th:nth-child(3), 
+table td:nth-child(3) {
+  width: 25%;
 }
 
 .article {

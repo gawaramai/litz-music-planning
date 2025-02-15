@@ -106,9 +106,9 @@ nav li {
     /* width: 15%; */
 }
 
-/* nav li:hover{
+nav li:hover{
     border-bottom: var(--border-waight) solid var(--border-color);
-} */
+}
 
 nav a {
     color: var(--text-color-basic);
@@ -167,7 +167,7 @@ main {
 }
 
 .main-visual-contents button:hover {
-    background-color: lightgrey
+    background-color: lightgrey;
 }
 
 .greeting {
