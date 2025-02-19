@@ -4,6 +4,11 @@
 /* Google-font */
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap'); */
 
+@font-face {
+    font-family: 'litz-music-planning';
+    src: url(../fonts/Litzmusicplanning-Regular.otf)  format('opentype');
+}
+
 :root {
     /* 変数を定義 */
     --header-height: 90px; 
@@ -81,6 +86,12 @@ header {
 
 .logo {
     place-content: center;
+}
+
+.logo > h1 {
+    font-family: 'litz-music-planning', serif;
+    font-size: 220%;
+    font-weight: 100;
 }
 
 .logo > a > img {
